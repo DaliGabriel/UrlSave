@@ -1,1 +1,1 @@
-# crud_php_sql_tailwind_css
+# Simple crud app using php, mysql and tailwind for styles
