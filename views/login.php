@@ -19,17 +19,18 @@
           <picture>
             <source
             media="(min-width: 465px)"
-            srcset="/views/assets/undraw_secure_login_pdn4.svg"
+            srcset="/crud_php_sql/views/assets/undraw_secure_login_pdn4.svg"
             >
             <img
-              src="/views/assets/undraw_access_account_re_8spm.svg"
+              src="/crud_php_sql/views/assets/undraw_access_account_re_8spm.svg"
               class="w-full"
-              alt="Sample image"
+              alt=""
             />
           </picture>
         </div>
         <div class="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
-          <form>
+          <!-- Formulario -->
+          <form method="POST">
             <div class="flex flex-row items-center justify-center lg:justify-start">
               <p class="text-lg mb-0 mr-4">Sign in with</p>
               <button
@@ -121,7 +122,7 @@
               <p class="text-sm font-semibold mt-2 pt-1 mb-4">
                 Don't have an account?
                 <a
-                  href="register.html"
+                  href="register.php"
                   class="text-blue-600 hover:text-emerald-700 focus:text-emerald-500 transition duration-200 ease-in-out"
                   >Register</a
                 >
