@@ -15,6 +15,16 @@ if (!isset($_SESSION['user_id'])) {
 </head>
 <body>
 
+    
+
+    <form method="POST" action="../controller/logout.php">
+        <button
+        type="submit"
+        name="loggout"
+        >
+        Loggout
+        </button>
+    </form>
 
 
     <h1>Welcome</h1>
