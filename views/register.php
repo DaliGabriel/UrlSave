@@ -25,40 +25,73 @@
                     <form action="/crud_php_sql/controller/create_user.php" method="POST">
                         <div class="flex -mx-3">
                             
+                            <!--First name-->
                             <div class="w-1/2 px-3 mb-5">
                                 <label for="" class="text-xs font-semibold px-1">First name</label>
                                 <div class="flex">
                                     <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="fa-regular fa-user  mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                    <input  type="text" name="first_name_register" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="John" required  title="Letters And Minimum 4">
+                                    <input  
+                                    type="text" 
+                                    name="first_name_register" 
+                                    class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" 
+                                    placeholder="John" 
+                                    required  
+                                    title="Letters And Minimum 4"
+                                    id="firstNameCheck"
+                                    required minlength="3"
+                                    >
                                 </div>
                             </div>
                             
+                            <!--Last name-->
                             <div class="w-1/2 px-3 mb-5">
                                 <label for="" class="text-xs font-semibold px-1">Last name</label>
                                 <div class="flex">
                                     <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="fa-solid fa-user mdi mdi-account-outline text-gray-400 text-lg"></i></div>
-                                    <input name="last_name_register" type="text" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="Smith" required title="Letters And Minimum 4">
+                                    <input 
+                                    name="last_name_register" 
+                                    type="text" 
+                                    class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" 
+                                    placeholder="Smith" 
+                                    required title="Letters And Minimum 4"
+                                    id="lastNameCheck"
+                                    required 
+                                    minlength="3"
+                                    >
                                 </div>
                             </div>
                         
                         </div>
                         
+                        <!--Email-->
                         <div class="flex -mx-3">
                             <div class="w-full px-3 mb-2">
                                 <label for="" class="text-xs font-semibold px-1">Email</label>
                                 <div class="flex">
                                     <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="fa-regular fa-envelope text-gray-400 text-lg"></i></div>
-                                    <input name="email_register" type="email" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="johnsmith@example.com" required>
+                                    <input 
+                                    name="email_register" 
+                                    type="email" 
+                                    class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" 
+                                    placeholder="johnsmith@example.com" 
+                                    required>
                                 </div>
                             </div>
                         </div>
                         
+                        <!--Password-->
                         <div class="flex -mx-3">
                             <div class="w-full px-3 mb-3">
                                 <label for="" class="text-xs font-semibold px-1">Password</label>
                                 <div class="flex">                                                                                  
                                     <div class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"><i class="fa-solid fa-lock text-gray-400 text-lg"></i></div>
-                                    <input id="password" name="password_register" type="password" class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" placeholder="************" required minlength="8">
+                                    <input 
+                                    id="password" 
+                                    name="password_register" 
+                                    type="password" 
+                                    class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500" 
+                                    placeholder="************" 
+                                    required minlength="8">
                                 </div>
                             </div>
                         </div>
@@ -66,7 +99,7 @@
                         
 
                         
-
+                        <!--Confirm Password-->
                         <div class="flex -mx-3">
                             <div class="w-full px-3 mb-6">
                                 <label for="" class="text-xs font-semibold px-1">Confirm your password</label>
@@ -77,19 +110,25 @@
                             </div>
                         </div>
 
+                        <!--Password Matching-->
                         <div class="border-gray-200 rounded-3xl shadow-xl w-full">
                             <span class="flex justify-center mb-5" id="message"></span>
                         </div>
 
-
+                        <!--Button submit-->
                         <div class="flex -mx-1">
                             <div class="w-full px-3 mb-3">
-                                <button  type="submit" class="block w-full max-w-xs mx-auto bg-blue-500 hover:bg-blue-700 focus:bg-blue-700 text-white rounded-lg px-3 py-3 font-semibold">REGISTER NOW</button>
+                                <button  
+                                    type="submit" 
+                                    class="block w-full max-w-xs mx-auto bg-blue-500 hover:bg-blue-700 focus:bg-blue-700 text-white rounded-lg px-3 py-3 font-semibold"
+                                    >
+                                    REGISTER NOW
+                                </button>
                             </div>
                         </div>
                         
 
-                        
+                        <!--Redirect to login-->
                         <div class="grid place-items-center">
                             <a class="text-blue-700" 
                                 href="login.php">
@@ -102,6 +141,7 @@
         </div>
     </div>
 </div>
+
 <!--ajax api-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
@@ -114,16 +154,15 @@
 });
 </script>
 <script>
-        var password = document.getElementById("password")
-      , confirm_password = document.getElementById("confirm_password");
-    
-function validatePassword(){
-    confirm_password.setCustomValidity( password.value != 
-    confirm_password.value ? "Passwords Don't Match" : '');
-}
+    //Only letters on Name and lastname input check
+    function testInput(event) {
+        var value = String.fromCharCode(event.which);
+        var pattern = new RegExp(/[a-zåäö ]/i);
+        return pattern.test(value);
+    }
 
-password.onchange = validatePassword;
-confirm_password.onkeyup = validatePassword;
+    $('#firstNameCheck').bind('keypress', testInput);
+    $('#lastNameCheck').bind('keypress', testInput);
 </script>
 </body>
 </html>

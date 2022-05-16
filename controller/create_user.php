@@ -1,6 +1,7 @@
 <?php
 
 require_once("../database/Connection.php");
+session_start();
 
 //check if the data send from a form is not empy
 if (!empty($_POST['first_name_register']) 
@@ -21,20 +22,21 @@ if (!empty($_POST['first_name_register'])
         $pass = $_POST['password_register_confirm'];
         
         //check if email is in the table database
-        $query = $conn->prepare( "SELECT * FROM register WHERE email = ?" );
-        $query->bind_param( 'd', $mail );
+        $query = $conn->prepare( "SELECT * FROM register WHERE email = :mail" );
+        $query->bindParam( ':mail', $mail );
         $query->execute();
 
 
-        if( $query->fetch() > 0 ) { # If rows are found for query
+        if( $query->fetch() > 0 ) 
+        { # If rows are found for query
             echo"<script>
                 alert('The Mail Is Already Registered!!!');
                 window.location.href='/crud_php_sql/views/register.php';
                 </script>";
-       }
-       else {
+        }
+        else {
             //sql querys to insert data form
-            $sql = "INSERT INTO register (name, last_name, email, password) VALUES(?,?,?,?)";
+            $sql = "INSERT INTO register (name, last_name, email, password) VALUES(:name,:lName,:mail,:pass)";
             //prepare query sentence
             $stmt = $conn -> prepare($sql);
             
@@ -42,18 +44,31 @@ if (!empty($_POST['first_name_register'])
             $pass = password_hash($pass,PASSWORD_BCRYPT);
 
             //insert query with the values into a sql database
-            $stmt->bind_param("ssss",$name,$l_name,$mail,$pass);
+            $stmt->bindParam(":name",$name);
+            $stmt->bindParam(":lName",$l_name);
+            $stmt->bindParam(":mail",$mail);
+            $stmt->bindParam(":pass",$pass);
             
             
 
             if ($stmt -> execute()) {
                 $message = "Created User";
-                echo $message;
+
+                echo"<script>
+                alert('$message!!!');
+                window.location.href='/crud_php_sql/views/login.php';
+                </script>";
+
             }else{
                 $message ="cant create user";
-                echo $message;
+
+                echo"<script>
+                alert('$message!!!');
+                window.location.href='/crud_php_sql/views/register.php';
+                </script>";
+                
             }
-            header('location: ../views/login.php');
+            
         }
         
         
