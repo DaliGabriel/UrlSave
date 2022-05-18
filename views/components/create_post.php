@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com/?plugins=forms"></script>
 </head>
 <body>
     
@@ -36,19 +36,25 @@
                   Description
                 </label>
                 <textarea name="description"
-                  class="block w-full mt-1 border-gray-300 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  class="block w-full mt-1 border-gray-400 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
                   rows="4" placeholder="400"></textarea>
               </div>
 
               <div class="flex items-center justify-start mt-4 gap-x-2">
-                <button type="submit"
-                  class="px-6 py-2 text-sm font-semibold rounded-md shadow-md text-sky-100 bg-sky-500 hover:bg-sky-700 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300">
-                  Save
-                </button>
-                <button type="submit"
-                  class="px-6 py-2 text-sm font-semibold text-gray-100 bg-gray-400 rounded-md shadow-md hover:bg-gray-600 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300">
-                  Cancel
-                </button>
+                
+                <form action="#">
+                  <button type="submit"
+                    class="px-6 py-2 text-sm font-semibold rounded-md shadow-md text-sky-100 bg-blue-500 hover:bg-blue-700 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300">
+                    Save
+                  </button>
+                </form>
+                
+                <form action="/crud_php_sql/views/index.php">
+                  <button type="submit"
+                    class="px-6 py-2 text-sm font-semibold text-gray-100 bg-red-400 rounded-md shadow-md hover:bg-red-600 focus:outline-none focus:border-red-900 focus:ring ring-red-300">
+                    Cancel
+                  </button>
+                </form>
               </div>
             </form>
           </div>

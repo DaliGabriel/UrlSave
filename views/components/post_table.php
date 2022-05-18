@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com/?plugins=forms"></script>
 </head>
 <body>
     
@@ -63,8 +63,9 @@
                     <span>12/12/22</span>
                 </td>
 
+                <!-- Edit icon -->
                 <td class="text-sm font-medium leading-5 text-center whitespace-no-wrap border-b border-gray-200 ">
-                    <a href="#" class="text-indigo-600 hover:text-indigo-900">
+                    <a href="/crud_php_sql/views/components/edit_post.php" class="text-indigo-600 hover:text-indigo-900">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -72,8 +73,9 @@
                     </svg>
                     </a>
 
+                <!-- see icon -->
                 <td class="text-sm font-medium leading-5 text-center whitespace-no-wrap border-b border-gray-200 ">
-                    <a href="#" class="text-gray-600 hover:text-gray-900">
+                    <a href="/crud_php_sql/views/components/show_post.php" class="text-gray-600 hover:text-gray-900">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -85,6 +87,7 @@
 
                 </td>
 
+                <!-- delete icon -->
                 </td>
                 <td class="text-sm font-medium leading-5 whitespace-no-wrap border-b border-gray-200 ">
                     <a href="#"><svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-600 hover:text-red-800"

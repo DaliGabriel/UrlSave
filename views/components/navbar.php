@@ -47,7 +47,15 @@
       </button>
     </form>
 
-   <?php } ?>
+    <?php } 
+   elseif(basename($_SERVER['PHP_SELF']) == 'show_post.php'){
+   ?>
+   <form action="/crud_php_sql/views/index.php">
+      <button class="bg-transparent hover:bg-sky-500 text-black-700 font-semibold hover:text-white py-2 px-4 border border-sky-500 hover:border-transparent rounded">
+        Home
+      </button>
+    </form>
+    <?php } ?>
 
     
   </div>
