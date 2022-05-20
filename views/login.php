@@ -71,11 +71,11 @@
               >
                 Login
               </button>
-              <p class="text-sm font-semibold mt-2 pt-1 mb-4">
+              <p class="text-md font-semibold mt-2 pt-1 mb-4">
                 Don't have an account?
                 <a
                   href="register.php"
-                  class="text-blue-600 hover:text-emerald-700 focus:text-emerald-500 transition duration-200 ease-in-out"
+                  class=" text-lg text-blue-600 hover:text-emerald-700 focus:text-emerald-500 transition duration-200 ease-in-out"
                   >Register</a
                 >
               </p>

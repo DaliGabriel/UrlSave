@@ -1,3 +1,11 @@
+
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header('location: ../login.php');;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,8 +26,21 @@
           </div>
 
           <div class="w-full px-6 py-4 bg-white rounded shadow-md ring-1 ring-gray-900/10">
-            <form method="POST" action="#">
+            <form method="POST" action="../../controller/create_post.php">
               <!-- Title -->
+              <div>
+                <label class="block text-sm font-bold text-gray-700" for="title">
+                  Url
+                </label>
+
+                <input
+                  class="block w-full mt-1 border-gray-400 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  type="url" 
+                  name="url"
+                  required 
+                />
+              </div>
+
               <div>
                 <label class="block text-sm font-bold text-gray-700" for="title">
                   Title
@@ -27,34 +48,39 @@
 
                 <input
                   class="block w-full mt-1 border-gray-400 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                  type="text" name="email" placeholder="180" />
+                  type="text" 
+                  name="title" 
+                />
               </div>
 
               <!-- Description -->
               <div class="mt-4">
-                <label class="block text-sm font-bold text-gray-700" for="password">
+                <label class="block text-sm font-bold text-gray-700">
                   Description
                 </label>
-                <textarea name="description"
-                  class="block w-full mt-1 border-gray-400 rounded-md shadow-sm placeholder:text-gray-400 placeholder:text-right focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
-                  rows="4" placeholder="400"></textarea>
+                <textarea 
+                  name="description"
+                  name="description"
+                  class="block w-full mt-1 border-gray-400 rounded-md shadow-sm placeholder:text-gray-400 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                  rows="4"></textarea>
               </div>
 
               <div class="flex items-center justify-start mt-4 gap-x-2">
                 
-                <form action="#">
+
                   <button type="submit"
                     class="px-6 py-2 text-sm font-semibold rounded-md shadow-md text-sky-100 bg-blue-500 hover:bg-blue-700 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300">
                     Save
                   </button>
-                </form>
                 
-                <form action="/crud_php_sql/views/index.php">
-                  <button type="submit"
+                  <!--formaction make work another button redirect -->
+                  <button 
+                  type="submit"
+                  formaction="/crud_php_sql/views/index.php"
                     class="px-6 py-2 text-sm font-semibold text-gray-100 bg-red-400 rounded-md shadow-md hover:bg-red-600 focus:outline-none focus:border-red-900 focus:ring ring-red-300">
                     Cancel
                   </button>
-                </form>
+
               </div>
             </form>
           </div>

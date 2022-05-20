@@ -1,3 +1,11 @@
+
+<?php
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header('location: ../login.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +24,7 @@
     <div class="w-full px-16 py-20 mt-6 overflow-hidden bg-white rounded-lg lg:max-w-4xl">
 
       <div class="mb-4">
-        <h1 class="font-serif text-3xl font-bold underline decoration-gray-400"> Post Show</h1>
+        <h1 class="font-serif text-3xl font-bold underline decoration-blue-600"> Post Show</h1>
       </div>
 
       <div class="w-full px-6 py-4 bg-white rounded shadow-md ring-1 ring-gray-900/10">

@@ -38,6 +38,7 @@
         }else{
             if (password_verify($password_login, $results['password'])) {
                 $_SESSION['user_id'] = $results['id'];
+                $_SESSION['email'] = $results['email'];
                 $message ="logged";
 
                 echo"<script>
