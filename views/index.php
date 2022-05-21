@@ -1,6 +1,5 @@
-
 <?php
-require('../controller/show_post.php');
+require_once('../controller/show_post.php');
 if (!isset($_SESSION['user_id'])) {
     header('location: ./login.php');
 }

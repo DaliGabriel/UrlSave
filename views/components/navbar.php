@@ -9,7 +9,7 @@
 <body>
 
 
-<nav class=" flex justify-around py-4 mx-auto bg-white shadow-2xl">
+<nav class="bg-opacity-25 backdrop-filter backdrop-blur-lg sticky top-0 z-50 flex justify-around py-4 mx-auto bg-white shadow-2xl">
   <div class="flex items-center">
     <h3 class="text-2xl font-medium text-blue-500">Url Save</h3>
   </div>
@@ -55,9 +55,28 @@
         Home
       </button>
     </form>
-    <?php } ?>
-
+    <?php } 
+    elseif(basename($_SERVER['PHP_SELF']) == 'edit_post.php'){
+    ?>
     
+    <form action="/crud_php_sql/views/index.php">
+      <button class="bg-transparent hover:bg-sky-500  text-black-700 font-semibold hover:text-white py-2 px-4 border border-sky-500 hover:border-transparent rounded ">
+        Home
+      </button>
+    </form>
+    
+    <?php }
+    elseif(basename($_SERVER['PHP_SELF']) == 'create_post.php'){
+    ?>
+
+    <form action="/crud_php_sql/views/index.php">
+      <button class="bg-transparent hover:bg-sky-500 text-black-700 font-semibold hover:text-white py-2 px-4 border border-sky-500 hover:border-transparent rounded">
+        Home
+      </button>
+    </form>
+    
+    <?php }?>
+
   </div>
 </nav>
     

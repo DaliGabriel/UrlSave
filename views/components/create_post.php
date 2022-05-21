@@ -15,6 +15,7 @@ if (!isset($_SESSION['user_id'])) {
     <script src="https://cdn.tailwindcss.com/?plugins=forms"></script>
 </head>
 <body>
+<?php include('./navbar.php'); ?>
     
 <div>
       <div class="flex flex-col items-center min-h-screen pt-6 bg-gray-100 sm:justify-center sm:pt-0">
@@ -27,7 +28,7 @@ if (!isset($_SESSION['user_id'])) {
 
           <div class="w-full px-6 py-4 bg-white rounded shadow-md ring-1 ring-gray-900/10">
             <form method="POST" action="../../controller/create_post.php">
-              <!-- Title -->
+              <!-- url -->
               <div>
                 <label class="block text-sm font-bold text-gray-700" for="title">
                   Url
@@ -41,6 +42,7 @@ if (!isset($_SESSION['user_id'])) {
                 />
               </div>
 
+              <!-- title -->
               <div>
                 <label class="block text-sm font-bold text-gray-700" for="title">
                   Title
