@@ -36,6 +36,11 @@
 
                     <th
                         class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
+                        Url
+                    </th>
+
+                    <th
+                        class="px-6 py-3 text-xs font-medium leading-4 tracking-wider text-left text-gray-500 uppercase border-b border-gray-200 bg-gray-50">
                         Description
                     </th>
 
@@ -52,19 +57,36 @@
             </thead>
 
             <tbody class="bg-white">
-                <tr>
+                
+                <!-- Fetch Database and show all posts -->
+                <?php 
+                    foreach($results as $result){
+                ?>
 
+                <tr>
+                    
+                    <!--Show the title post-->
                     <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                        <div class="text-sm leading-5 text-gray-900">Create CURD with tailwind v3
+                        <div class="text-sm leading-5 text-gray-900">
+                             <?php echo $result -> title?> 
                         </div>
                     </td>
-
+                    
+                    <!--Show Url links-->
                     <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
+                        <div class="text-sm leading-5 text-blue-900">
+                             <a href="<?php echo $result -> url?>" target="_blank"><?php echo $result -> url?></a>
+                        </div>
+                    </td>
+                    
+                    <!--Show Description-->
+                    <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                        <p><?php echo $result -> description?></p>
                     </td>
 
+                    <!--Show Date-->
                     <td class="pr-8 py-4 text-sm leading-5 text-gray-500 whitespace-no-wrap border-b border-gray-200">
-                        <span>12/12/22</span>
+                        <span><?php echo $result -> date?></span>
                     </td>
 
                     <!-- Edit icon -->
@@ -102,7 +124,12 @@
                         </td>
                 </tr>
 
-                <!--end -->
+                <?php 
+                    }
+                ?>
+                <!-- Close for each -->
+
+                <!--end table-->
             </tbody>
             </table>
         </div>
