@@ -1,1 +1,1 @@
-# Simple crud app using php, mysql and tailwind for styles.
+# Login App with crud for save your favorites url!!
