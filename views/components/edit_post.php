@@ -40,7 +40,7 @@ $results = $query -> fetch(PDO::FETCH_OBJ);
       <div class="flex flex-col items-center min-h-screen pt-6 bg-gray-100 sm:justify-center sm:pt-0">
         <div class="w-full px-16 py-20 mt-6 overflow-hidden bg-white rounded-lg lg:max-w-4xl">
           <div class="mb-4">
-            <h1 class="font-serif text-3xl font-bold underline decoration-blue-600">
+            <h1 class="font-serif text-5xl font-bold underline decoration-blue-600">
               Edit Post
             </h1>
           </div>
@@ -49,7 +49,7 @@ $results = $query -> fetch(PDO::FETCH_OBJ);
             <form method="POST" action="../../controller/edit_post.php">
               <!-- url -->
               <div>
-                <label class="block text-sm font-bold text-gray-700" for="title">
+                <label class="block text-lg font-bold text-gray-700" for="title">
                   Url
                 </label>
 
@@ -64,7 +64,7 @@ $results = $query -> fetch(PDO::FETCH_OBJ);
 
               <!-- title -->
               <div>
-                <label class="block text-sm font-bold text-gray-700" for="title">
+                <label class="block text-lg font-bold text-gray-700" for="title">
                   Title
                 </label>
 
@@ -78,7 +78,7 @@ $results = $query -> fetch(PDO::FETCH_OBJ);
 
               <!-- Description -->
               <div class="mt-4">
-                <label class="block text-sm font-bold text-gray-700">
+                <label class="block text-lg font-bold text-gray-700">
                   Description
                 </label>
                 <textarea 
@@ -93,7 +93,7 @@ $results = $query -> fetch(PDO::FETCH_OBJ);
                 
 
                   <button type="submit"
-                    class="px-6 py-2 text-sm font-semibold rounded-md shadow-md text-sky-100 bg-blue-500 hover:bg-blue-700 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300">
+                    class="px-6 py-2 text-lg font-semibold rounded-md shadow-md text-sky-100 bg-blue-500 hover:bg-blue-700 focus:outline-none focus:border-gray-900 focus:ring ring-gray-300">
                     Save
                   </button>
                 
@@ -106,7 +106,7 @@ $results = $query -> fetch(PDO::FETCH_OBJ);
                   type="submit"
                   value="cancell"
                   onClick="document.location.href='http://localhost/crud_php_sql/views/index.php';"
-                  class="ml-0 mt-4 px-5 py-2 text-sm font-semibold text-gray-100 bg-red-400 rounded-md shadow-md hover:bg-red-600 focus:outline-none focus:border-red-900 focus:ring ring-red-300"
+                  class="ml-0 mt-4 px-5 py-2 text-lg font-semibold text-gray-100 bg-red-400 rounded-md shadow-md hover:bg-red-600 focus:outline-none focus:border-red-900 focus:ring ring-red-300"
                   >
                     Cancel
             </button>

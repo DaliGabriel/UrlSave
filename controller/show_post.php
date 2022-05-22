@@ -8,5 +8,5 @@
         $query->execute();
         $results = $query -> fetchall(PDO::FETCH_OBJ);
 
-        
+        //Delete function
 

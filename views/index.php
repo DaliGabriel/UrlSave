@@ -20,6 +20,7 @@ if (!isset($_SESSION['user_id'])) {
     <?php include('./components/navbar.php'); ?>
 
     <h1 class="text-center font-medium leading-tight text-5xl mt-8 mb-2 text-blue-500">Welcome</h1>
+    <h1 class="text-center font-medium leading-tight text-3xl mt-2  text-blue-900"><?php echo$_SESSION['email']; ?></h1>
 
     <?php include('./components/post_table.php'); ?>
 
