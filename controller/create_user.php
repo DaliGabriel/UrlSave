@@ -16,10 +16,10 @@ if (!empty($_POST['first_name_register'])
     ) 
     {
         //data form
-        $name = $_POST['first_name_register'];
-        $l_name = $_POST['last_name_register'];
-        $mail = $_POST['email_register'];
-        $pass = $_POST['password_register_confirm'];
+        $name = htmlspecialchars($_POST['first_name_register'], ENT_QUOTES, 'UTF-8');
+        $l_name = htmlspecialchars($_POST['last_name_register'], ENT_QUOTES, 'UTF-8');
+        $mail = htmlspecialchars($_POST['email_register'], ENT_QUOTES, 'UTF-8');
+        $pass = htmlspecialchars($_POST['password_register_confirm'], ENT_QUOTES, 'UTF-8');
         
         //check if email is in the table database
         $query = $conn->prepare( "SELECT * FROM register WHERE email = :mail" );

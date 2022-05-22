@@ -3,6 +3,10 @@
     if (isset($_POST['codigo'])) {
         
         require_once("../database/Connection.php");
+
+        $url = htmlspecialchars($_POST['url'], ENT_QUOTES, 'UTF-8');
+        $title = htmlspecialchars($_POST['title'], ENT_QUOTES, 'UTF-8');
+        $description = htmlspecialchars($_POST['description'], ENT_QUOTES, 'UTF-8');
         
         //sql querys to insert data form
         $sql = "UPDATE urlsave SET url=:url, title=:title, description=:description WHERE date=:codigo";
@@ -10,9 +14,9 @@
         $stmt = $conn -> prepare($sql);
 
         //insert query with the values into a sql database
-        $stmt->bindParam(":url",$_POST['url']);
-        $stmt->bindParam(":title",$_POST['title']);
-        $stmt->bindParam(":description",$_POST['description']);
+        $stmt->bindParam(":url",$url);
+        $stmt->bindParam(":title",$title);
+        $stmt->bindParam(":description",$description);
         $stmt->bindParam(":codigo",$_POST['codigo']);
         
         
