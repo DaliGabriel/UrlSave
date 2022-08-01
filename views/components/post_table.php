@@ -12,11 +12,11 @@
     <div class="mb-4">
         <h1 class="font-serif text-5xl text-gray-00 underline decoration-blue-600">Your Urls</h1>
         <div class="flex justify-end mr-1">
-            <form action="/crud_php_sql/views/components/create_post.php">
             <button class="px-4 py-2 rounded-md bg-blue-500 text-white hover:bg-blue-600 m">
-                Create New Register
+                <a href="./components/create_post.php">    
+                    Create New Register
+                </a>
             </button>
-            </form>
         
         </div>
     </div>

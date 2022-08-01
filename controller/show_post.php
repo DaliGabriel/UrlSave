@@ -1,6 +1,7 @@
 <?php
     session_start();
-    require_once("C:/xampp/htdocs/crud_php_sql/database/Connection.php");
+
+    require_once $_SERVER['DOCUMENT_ROOT'] . '/URLSAVE/database/Connection.php';
 
         //Database consulting 
         $query = $conn->prepare( "SELECT * FROM urlsave WHERE email = :email");

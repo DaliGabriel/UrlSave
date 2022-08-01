@@ -16,7 +16,7 @@
     <div class="bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden" style="max-width:1000px">
         <div class="md:flex w-full">
             <div class="hidden md:block w-1/2 bg-indigo-500 py-10 px-10">
-                <img src="/crud_php_sql/views/assets/undraw_sculpting_-1-c9p.svg" alt="svg-register">
+                <img src="./assets/undraw_sculpting_-1-c9p.svg" alt="svg-register">
             </div>
             <div class="w-full md:w-1/2 py-3 px-5 md:px-10">
                 <div class="text-center mb-2">
@@ -25,7 +25,7 @@
                 </div>
                 <div>
                     <!--Formulario -->
-                    <form action="/crud_php_sql/controller/create_user.php" method="POST">
+                    <form action="/URLSAVE/controller/create_user.php" method="POST">
                         <div class="flex -mx-3">
                             
                             <!--First name-->

@@ -43,7 +43,7 @@
 
                 echo"<script>
                 alert('$message!!!');
-                window.location.href='/crud_php_sql/views/index.php';
+                window.location.href='../views/index.php';
                 </script>";
             }else{
                 $message ="Credentials Wrong";

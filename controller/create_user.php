@@ -56,7 +56,7 @@ if (!empty($_POST['first_name_register'])
 
                 echo"<script>
                 alert('$message!!!');
-                window.location.href='/crud_php_sql/views/login.php';
+                window.location.href='../views/login.php';
                 </script>";
 
             }else{
@@ -64,7 +64,7 @@ if (!empty($_POST['first_name_register'])
 
                 echo"<script>
                 alert('$message!!!');
-                window.location.href='/crud_php_sql/views/register.php';
+                window.location.href='../views/register.php';
                 </script>";
                 
             }

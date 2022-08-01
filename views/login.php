@@ -22,10 +22,10 @@
           <picture>
             <source
             media="(min-width: 465px)"
-            srcset="/crud_php_sql/views/assets/undraw_secure_login_pdn4.svg"
+            srcset="./assets/undraw_secure_login_pdn4.svg"
             >
             <img
-              src="/crud_php_sql/views/assets/undraw_access_account_re_8spm.svg"
+              src="./assets/undraw_access_account_re_8spm.svg"
               class="w-full"
               alt=""
             />
@@ -33,7 +33,7 @@
         </div>
         <div class="xl:ml-20 xl:w-5/12 lg:w-5/12 md:w-8/12 mb-12 md:mb-0">
           <!-- Formulario -->
-          <form action="/crud_php_sql/controller/login_user.php" method="POST">
+          <form action="../controller/login_user.php" method="POST">
          
             <!-- Email input -->
             <div class="mb-6">
