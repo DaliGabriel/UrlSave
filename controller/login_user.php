@@ -33,7 +33,7 @@
 
                 echo"<script>
                 alert('$message!!!');
-                window.location.href='/crud_php_sql/views/login.php';
+                window.location.href='/URLSAVE/views/login.php';
                 </script>";
         }else{
             if (password_verify($password_login, $results['password'])) {
@@ -50,7 +50,7 @@
 
                 echo"<script>
                 alert('$message!!!');
-                window.location.href='/crud_php_sql/views/login.php';
+                window.location.href='/URLSAVE/views/login.php';
                 </script>";
             }
         }
@@ -59,7 +59,7 @@
     else{
         echo"<script>
                 alert('Credentials are empty');
-                window.location.href='/crud_php_sql/views/login.php';
+                window.location.href='/URLSAVE/views/login.php';
             </script>";
     }
 

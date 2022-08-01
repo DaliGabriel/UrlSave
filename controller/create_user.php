@@ -31,7 +31,7 @@ if (!empty($_POST['first_name_register'])
         { # If rows are found for query
             echo"<script>
                 alert('The Mail Is Already Registered!!!');
-                window.location.href='/crud_php_sql/views/register.php';
+                window.location.href='/URLSAVE/views/register.php';
                 </script>";
         }
         else {

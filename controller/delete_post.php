@@ -29,7 +29,7 @@
 
             echo"<script>
             alert('$message!!!');
-            window.location.href='/crud_php_sql/views/components/edit_post.php';
+            window.location.href='/URLSAVE/views/components/edit_post.php';
             </script>";
             
         }
@@ -37,6 +37,6 @@
             
         }else{
             
-            header('location: /crud_php_sql/views/index.php');
+            header('location: /URLSAVE/views/index.php');
 
         }

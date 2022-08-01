@@ -36,11 +36,11 @@ if(isset($_POST['url']) | isset($_POST['title']) | isset($_POST['description']))
 
         echo"<script>
         alert('$message!!!');
-        window.location.href='/crud_php_sql/views/components/create_post.php';
+        window.location.href='/URLSAVE/views/components/create_post.php';
         </script>";
         
     }
     
 }else{
-    header('location: /crud_php_sql/views/components/create_post.php');
+    header('location: /URLSAVE/views/components/create_post.php');
 }

@@ -41,7 +41,7 @@
    <?php }
    elseif(basename($_SERVER['PHP_SELF']) == 'register.php'){
    ?>
-    <form action="./views/login.php">
+    <form action="../views/login.php">
       <button class="bg-transparent hover:bg-sky-500 text-black-700 font-semibold hover:text-white py-2 px-4 border border-sky-500 hover:border-transparent rounded">
         Sign in
       </button>
@@ -59,7 +59,7 @@
     elseif(basename($_SERVER['PHP_SELF']) == 'edit_post.php'){
     ?>
     
-    <form action="/crud_php_sql/views/index.php">
+    <form action="/URLSAVE/views/index.php">
       <button class="bg-transparent hover:bg-sky-500  text-black-700 font-semibold hover:text-white py-2 px-4 border border-sky-500 hover:border-transparent rounded ">
         Home
       </button>
@@ -69,7 +69,7 @@
     elseif(basename($_SERVER['PHP_SELF']) == 'create_post.php'){
     ?>
 
-    <form action="/crud_php_sql/views/index.php">
+    <form action="/URLSAVE/views/index.php">
       <button class="bg-transparent hover:bg-sky-500 text-black-700 font-semibold hover:text-white py-2 px-4 border border-sky-500 hover:border-transparent rounded">
         Home
       </button>
