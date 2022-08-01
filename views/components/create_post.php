@@ -79,7 +79,7 @@ if (!isset($_SESSION['user_id'])) {
                   <button 
                   type="submit"
                   value="cancel"
-                  onClick="document.location.href='http://localhost/crud_php_sql/views/index.php';"
+                  onClick="document.location.href='/URLSAVE/views/index.php';"
                   class="px-6 py-2 text-sm font-semibold text-gray-100 bg-red-400 rounded-md shadow-md hover:bg-red-600 focus:outline-none focus:border-red-900 focus:ring ring-red-300"
                   >
                     Cancel

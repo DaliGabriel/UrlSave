@@ -12,11 +12,13 @@
     <div class="mb-4">
         <h1 class="font-serif text-5xl text-gray-00 underline decoration-blue-600">Your Urls</h1>
         <div class="flex justify-end mr-1">
-            <button class="px-4 py-2 rounded-md bg-blue-500 text-white hover:bg-blue-600 m">
-                <a href="./components/create_post.php">    
-                    Create New Register
-                </a>
-            </button>
+        <a href="./components/create_post.php"> 
+                <button class="px-4 py-2 rounded-md bg-blue-500 text-white hover:bg-blue-600 m">
+                    
+                        Create New Register
+                    
+                </button>
+            </a>
         
         </div>
     </div>
@@ -64,7 +66,7 @@
                 <tr>
                     
                     <!--Show the title post-->
-                    <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                    <td class=" px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                         <div class="text-lg leading-5 text-gray-900">
                              <?php echo $result -> title?> 
                         </div>
@@ -78,7 +80,7 @@
                     </td>
                     
                     <!--Show Description-->
-                    <td class=" px-6 py-4 whitespace-no-wrap border-b border-gray-200">
+                    <td class="px-6 py-4 whitespace-no-wrap border-b border-gray-200">
                         <p class="text-lg"><?php echo $result -> description?></p>
                     </td>
 
@@ -90,7 +92,7 @@
                     <!-- Edit icon -->
                         <td class="text-sm font-medium leading-5 text-center whitespace-no-wrap border-b border-gray-200 ">
                             <!-- identify the post -->
-                            <a href="/crud_php_sql/views/components/edit_post.php?codigo=<?php echo $result -> date?>" class="text-indigo-600 hover:text-indigo-900">
+                            <a href="../views/components/edit_post.php?codigo=<?php echo $result -> date?>" class="text-indigo-600 hover:text-indigo-900">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -101,7 +103,7 @@
 
                     <!-- see icon -->
                         <td class="text-sm font-medium leading-5 text-center whitespace-no-wrap border-b border-gray-200 ">
-                            <a href="/crud_php_sql/views/components/show_post.php" class="text-gray-600 hover:text-gray-900">
+                            <a href="/URLSAVE/views/components/show_post.php" class="text-gray-600 hover:text-gray-900">
                             <svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -115,7 +117,7 @@
                     <!-- delete icon -->
                         
                         <td class="text-sm font-medium leading-5 whitespace-no-wrap border-b border-gray-200 ">
-                            <a onclick="return confirm('Are You Sure You Want To Delete??');" href="/crud_php_sql/controller/delete_post.php?codigo=<?php echo $result -> date?>"><svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-red-600 hover:text-red-800"
+                            <a onclick="return confirm('Are You Sure You Want To Delete??');" href="/URLSAVE/controller/delete_post.php?codigo=<?php echo $result -> date?>"><svg xmlns="http://www.w3.org/2000/svg" class="w-10 h-10 text-red-600 hover:text-red-800"
                                 fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />

@@ -37,7 +37,7 @@ try {
     // use exec() because no results are returned
     $conn->exec($sql);
 
-    echo "Table register created successfully";
+  
   } catch(PDOException $e) {
     echo $sql . "<br>" . $e->getMessage();
   }
@@ -61,7 +61,6 @@ try {
     // use exec() because no results are returned
     $conn->exec($sql);
 
-    echo "Table urlsave created successfully";
   } catch(PDOException $e) {
     echo $sql . "<br>" . $e->getMessage();
   }

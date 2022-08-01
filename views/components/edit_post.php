@@ -105,7 +105,7 @@ $results = $query -> fetch(PDO::FETCH_OBJ);
             <button 
                   type="submit"
                   value="cancell"
-                  onClick="document.location.href='http://localhost/crud_php_sql/views/index.php';"
+                  onClick="document.location.href='/URLSAVE/views/index.php';"
                   class="ml-0 mt-4 px-5 py-2 text-lg font-semibold text-gray-100 bg-red-400 rounded-md shadow-md hover:bg-red-600 focus:outline-none focus:border-red-900 focus:ring ring-red-300"
                   >
                     Cancel

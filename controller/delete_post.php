@@ -21,7 +21,7 @@
 
             echo"<script>
             alert('$message!!!');
-            window.location.href='/crud_php_sql/views/components/show_post.php';
+            window.location.href='/URLSAVE/views/components/show_post.php';
             </script>";
 
         }else{
